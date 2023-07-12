@@ -1,31 +1,14 @@
-import './App.css';
-import Row from "./components/Row"
-import Banner from "./components/Banner"
-import Nav from "./components/Nav"
-import { categories } from './api';
+import React from 'react';
+import "./App.css"
+import Router from "./routes"
+import { BrowserRouter} from "react-router-dom"
 
 function App() {
 
-
   return (
-    <div className="App">
-      {/* Navbar */}
-      {/* destaque */}
-      {/* Em alta */}
-
-      <Nav></Nav>
-      <Banner></Banner>
-
-      {categories.map( (category) => {
-        return <Row 
-                  key={category.name} 
-                  title={category.title} 
-                  path={category.path}
-                  isLarge={category.isLarge}
-                 />
-      } )}
-
-    </div>
+    <BrowserRouter>
+        <Router />
+    </BrowserRouter>
   );
 }
 
