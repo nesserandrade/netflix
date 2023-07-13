@@ -27,8 +27,8 @@ function Login() {
       })
       .then((resp) => {
         //gravando na sessão do cliente local (no frontend)
-        sessionStorage.setItem("sessionID", resp?.data?.sessionID);
-        sessionStorage.setItem("idade", resp?.data?.idade);
+        localStorage.setItem("sessionID", resp?.data?.sessionID);
+        localStorage.setItem("idade", resp?.data?.idade);
         console.log(resp.data);
       })
       .catch((error) => {

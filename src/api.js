@@ -36,8 +36,8 @@ export const categories = [
 
 export const getMovies = async (path) => {
   try {
-    let se = sessionStorage.getItem("sessionID");
-    let idade = sessionStorage.getItem("idade");
+    let se = localStorage.getItem("sessionID");
+    let idade = localStorage.getItem("idade");
 
     const response = await fetch(API_DNS, {
       headers: {
